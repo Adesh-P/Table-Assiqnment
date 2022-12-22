@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #32312f;
+            font-family: sans-serif;
+        }
+        .container {
+            padding: 0 10%;
+            margin: 40px auto 0px;
+        }
+        h1 {
+            font-size: 40px;
+            color: #f1f1f1;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table thead {
+            background-color: red;
+        }
+        .table thead tr th {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+            padding: 10px;
+            vertical-align: top;
+            border: 1px solid #dee2e6;
+        }
+        .table tbody tr td {
+            color: #f1f1f1;
+            font-size: 18px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+            background-color: #3c3f44;
+        }
+        .text_open {
+            color: #ff1046;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .btn {
+            width: 130px;
+            text-decoration: none;
+            line-height: 35px;
+            background-color: red;
+            display: inline-block;
+            color: #fff;
+            font-weight: normal;
+            text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+            .table thead {
+                display: none;
+            } 
+            .table, .table tbody, .table tr, .table td {
+                display: block;
+                width: 100%;
+            }
+            .table tr {
+                margin-bottom: 15px;
+            }
+            .table tbody tr td {
+                text-align: right;
+                position: relative;
+            }
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0px;
+                padding-left: 15px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Table</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Start Date</th>
+                    <th>Start / End Time</th>
+                    <th>Batch Type</th>
+                    <th>Training Mode</th>
+                    <th>Batch Status</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Start Date">1 Jan 2023</td>
+                    <td data-label="Start / End Time">09:00 - 13:00</td>
+                    <td data-label="Batch Type">Weekend</td>
+                    <td data-label="Training Mode">Online Training</td>
+                    <td data-label="Batch Status"><span class="text_open">[Open]</span></td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Start Date">2 Jan 2023</td>
+                    <td data-label="Start / End Time">09:00 - 13:00</td>
+                    <td data-label="Batch Type">Weekend</td>
+                    <td data-label="Training Mode">Online Training</td>
+                    <td data-label="Batch Status"><span class="text_open">[Open]</span></td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Start Date">3 Jan 2023</td>
+                    <td data-label="Start / End Time">09:00 - 13:00</td>
+                    <td data-label="Batch Type">Weekend</td>
+                    <td data-label="Training Mode">Online Training</td>
+                    <td data-label="Batch Status"><span class="text_open">[Open]</span></td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Start Date">4 Jan 2023</td>
+                    <td data-label="Start / End Time">09:00 - 13:00</td>
+                    <td data-label="Batch Type">Weekend</td>
+                    <td data-label="Training Mode">Online Training</td>
+                    <td data-label="Batch Status"><span class="text_open">[Open]</span></td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+                </tr>
+                <tr>
+                    <td dara-label="Start Date">5 Jan 2023</td>
+                    <td data-label="Start / End Time">09:00 - 13:00</td>
+                    <td data-label="Batch Type">Weekend</td>
+                    <td data-label="Training Mode">Online Training</td>
+                    <td data-label="Batch Status"><span class="text_open">[Open]</span></td>
+                    <td data-label="#"><a href="#" class="btn">Enroll Now</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
